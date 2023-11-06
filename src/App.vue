@@ -1,30 +1,9 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-    <router-link to="/about">Commit Test</router-link>
-  </nav>
+  <div class="mt-n12 mx-auto" style="font-size: 3rem;" align="center">
+    Todo List
+  </div>
+  <!-- 아니 이거 Class왜 안먹는지 해결좀 해봐야 할듯 -->
+  <v-card>
+    <div class="grey--text text-subtitle-1" color="secondary">Todo List</div>
+  </v-card>
 </template>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
