@@ -1,9 +1,10 @@
 <template>
-  <div class="mt-n12 mx-auto" style="font-size: 3rem;" align="center">
-    Todo List
-  </div>
-  <!-- 아니 이거 Class왜 안먹는지 해결좀 해봐야 할듯 -->
-  <v-card>
-    <div class="grey--text text-subtitle-1" color="secondary">Todo List</div>
-  </v-card>
+  <v-app>
+    <!-- class를 사용하려면 root element로 v-app사용이 필수 -->
+    <router-link to="/about" icon="mdi-circle"></router-link>
+    <div class="mt-10" style="font-size: 2rem;" align="center">
+      <span class="text-indigo-darken-2">Todo List</span>
+      <v-icon icon="home" />
+    </div>
+  </v-app>
 </template>
