@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="my-class">
     Hello~
   </div>
 </template>
@@ -11,8 +11,7 @@ export default {
   }
 }
 </script>
-
-<style scoped>
+<style>
 /* h3 {
   margin: 40px 0 0;
 }
