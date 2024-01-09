@@ -9,7 +9,9 @@
 * 기한 설정하여 마감기한이 촉박한 순으로 리스트 적용 - 중요도와 연계(우선순위)(예정)
 
 ## 할 일 추가(상세)
-* 
+
+### 디자인 참조 화면
+![image](https://github.com/Anakin787/NewTodo/assets/40137503/ff3e5f75-3bf9-4452-9af9-f6c183e38f87) ![image](https://github.com/Anakin787/NewTodo/assets/40137503/3122c4ba-2756-40fb-92ea-641ed9a85edc)
 
 ## Project setup
 ```
