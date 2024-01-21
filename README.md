@@ -27,3 +27,5 @@ npm run serve
 ```
 npm run build
 ```
+
+package.lock에 있는 버전으로 설치시 `npm ci`

@@ -11,7 +11,7 @@
     "core-js": "^3.8.3",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3",
-    "vuetify": "^3.4.0-beta.0",
+    "vuetify": "^3.5.1",
     "vuex": "^4.0.0"
   },
   "devDependencies": {
@@ -47,5 +47,9 @@
     "last 2 versions",
     "not dead",
     "not ie 11"
-  ]
+  ],
+  "description": "* 엔터 및 버튼 클릭시 할일 리스트에 한줄씩 추가\r * 체크박스 클릭시 middle라인 css적용\r * 체크된것 삭제 또는 전체삭제\r * 글 클릭시 수정가능한 상태로 변경\r * 할 일 중요도 선택하여 중요도 순으로 리스트 적용(예정)\r * 기한 설정하여 마감기한이 촉박한 순으로 리스트 적용 - 중요도와 연계(우선순위)(예정)",
+  "main": "babel.config.js",
+  "author": "",
+  "license": "ISC"
 }
