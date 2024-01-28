@@ -1,9 +1,9 @@
 <template>
   <v-app>
     <!-- class를 사용하려면 root element로 v-app사용이 필수 -->
-    <div class="text-indigo bg-grey-lighten-3" style="font-size: 2rem; height: 15%" align="center">
-      <div class="mt-7">Todo List<v-icon style="font-weight:700; font-size:36px">check</v-icon></div>
-      <div class="mr-5" style="font-size:16px" align="right">{{timeSlice()}}</div>
+    <div class="text-indigo bg-grey-lighten-3" style="font-size: 2rem; height: 100px" align="center">
+      <div class="mt-5" style="font-family: yeonsung;">지우니의 Todo List</div>
+      <div class="mr-5 mb-1" style="font-size:16px" align="right">{{timeSlice()}}</div>
     </div>
     <TodoLayout/>
   </v-app>
@@ -36,3 +36,9 @@ export default {
   }
 }
 </script>
+<style>
+@font-face {
+  font-family: yeonsung;
+  src: url(../src/assets/fonts/BMYEONSUNG_ttf.ttf);
+}
+</style>

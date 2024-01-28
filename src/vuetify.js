@@ -3,7 +3,7 @@ import 'vuetify/styles'
 import { createVuetify } from 'vuetify'
 import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
-import { aliases, md } from 'vuetify/iconsets/md'
+import { aliases, mdi } from 'vuetify/iconsets/mdi'
 
 
 
@@ -11,10 +11,10 @@ const vuetify = createVuetify({
   components,
   directives,
   icons: {
-    defaultSet: 'md',
+    defaultSet: 'mdi',
     aliases,
     sets: {
-      md,
+      mdi,
     },
   },
 })
