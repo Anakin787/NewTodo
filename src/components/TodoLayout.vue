@@ -37,6 +37,7 @@ export default {
   data(){
     return{
       inputTodo : "",
+<<<<<<< HEAD
       inputRules: [
         v => !!v || '공백은 입력할 수 없습니다.',
         v => v.trim().length > 0 || '공백 입력은 허용되지 않습니다.',
@@ -44,9 +45,18 @@ export default {
       ],
 
       todoList:[]
+=======
+      todoList : [],
+      charCount: [v => !(v && v.length >= 50) || '50자 이상 입력할 수 없습니다.']
+>>>>>>> c6bfb3157d230072b3b1ea3cee19f746dbeb5e72
     }
   },
+  mounted(){
+    let getTodo = localStorage.getItem("todolist") || []
+    this.todoList = JSON.parse(getTodo) 
+  },
   methods: {
+<<<<<<< HEAD
     inputData(){
       if (this.inputTodo.trim() === '') {
         // 공백인 경우 알림
@@ -61,6 +71,13 @@ export default {
     submitIfValid() {
       if (this.$refs.form.validate()) {
         this.inputData();
+=======
+    submit(){
+      if(this.inputTodo !== ""){
+        this.todoList.push(this.inputTodo)
+        localStorage.setItem("todolist", JSON.stringify(this.todoList))
+        this.inputTodo = ''
+>>>>>>> c6bfb3157d230072b3b1ea3cee19f746dbeb5e72
       }
     }
   }
