@@ -19,14 +19,19 @@ export default {
 
   data() {
     return {
-      time: ""
+      time: "",
+      timerId: null
     }
   },
 
   mounted() {
-    this.time = setInterval(() => {
-     this.timeSlice()
+    this.timerId = setInterval(() => {
+      this.timeSlice()
     }, 1000);
+  },
+
+  beforeUnmount() {
+    clearInterval(this.timerId);
   },
 
   methods: {
