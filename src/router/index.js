@@ -1,17 +1,22 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import AppView from '../App.vue'
+import TodoLayout from '../components/TodoLayout.vue'
 
 const routes = [
   {
     path: '/',
     name: 'home',
-    component: AppView
+    component: TodoLayout
   },
-  // {
-  //   path: '/about',
-  //   name: 'about',
-  //   component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  // }
+  {
+    path: '/completed',
+    name: 'completed',
+    component: () => import('../components/CompletedTodos.vue')
+  },
+  {
+    path: '/major',
+    name: 'major',
+    component: () => import('../components/MajorTodos.vue')
+  }
 ]
 
 const router = createRouter({

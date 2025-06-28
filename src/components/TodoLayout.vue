@@ -1,6 +1,6 @@
 <template>
   <v-container class="text-center font-weight-bold text-h6 outlined">
-    <v-card id="card" class="elevation-3 text-center mx-auto">
+    <v-card id="card" class="elevation-3 text-center mx-auto width: 100%;">
       <div class="font-weight-black mt-2 mb-1" style="font-size: 24px;">갓생일지</div>
       <v-row>
         <v-col cols="9">

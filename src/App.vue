@@ -1,21 +1,17 @@
 <template>
   <AppLayout>
-    <template #default>
-      <div class="mr-5 mb-1" style="font-size:16px" align="right">{{ time }}</div>
-      <TodoLayout/>
-    </template>
+    <div class="mr-5 mb-1" style="font-size:16px" align="right">{{ time }}</div>
+    <router-view />
   </AppLayout>
 </template>
 
 <script>
 import AppLayout from './components/AppLayout.vue';
-import TodoLayout from './components/TodoLayout.vue';
 
 export default {
-  name: "HomeView",
+  name: "App",
   components: {
-    AppLayout,
-    TodoLayout
+    AppLayout
   },
 
   data() {
@@ -43,6 +39,7 @@ export default {
   }
 }
 </script>
+
 <style>
 @font-face {
   font-family: yeonsung;
