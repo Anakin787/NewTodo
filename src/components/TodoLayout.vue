@@ -4,8 +4,14 @@
       <v-row>
         <v-col cols="11">
           <v-form ref="form" @submit.prevent='inputData' class="mt-5">
-            <v-text-field v-model="inputTodo" class="ml-5" variant="outlined" :rules="inputRules" clearable
-              label="할 일을 입력해 주세요."></v-text-field>
+            <v-text-field v-model="inputTodo" class="ml-5 large-input" variant="outlined" :rules="inputRules" clearable
+              label="할 일을 입력해 주세요."
+              :style="{ '--input-font-size': '30px', '--input-height': '60px' }"
+              >
+              <template v-slot:input="{ props }">
+                <input v-bind="props" style="font-size: 30px !important; height: 60px !important;" />
+              </template>
+            </v-text-field>
           </v-form>
         </v-col>
         <v-col cols="1" class="pl-0 mt-5">
@@ -32,7 +38,8 @@
             <div style="flex: 0 0 auto;">
               <v-checkbox v-model="todo.completed" color="primary" hide-details @click.stop></v-checkbox>
             </div>
-            <span class="ml-3 text-left" style="flex: 1;">{{ todo.text }}</span>
+            <span class="ml-3 text-left" style="flex: 1;" :style="{ textDecoration: todo.completed ? 'line-through' : 'none' }">{{ todo.text }}</span>
+            <v-btn icon="mdi-delete" color="error" @click.stop="deleteTodo(idx)"></v-btn>
           </v-card>
         </v-col>
       </v-row>
@@ -106,6 +113,10 @@ export default {
     onCardClick(index) {
       this.selectedTodo = this.todoList[index];
       this.showDetails = true;
+    },
+
+    deleteTodo(index) {
+      this.todoList.splice(index, 1);
     }
   }
 }
@@ -114,6 +125,22 @@ export default {
 @font-face {
   font-family: yeonsung;
   src: url(../assets/fonts/BMYEONSUNG_ttf.ttf);
+}
+
+/* Global style for large input using CSS variables */
+.large-input .v-field__input {
+  font-size: var(--input-font-size, 20px) !important;
+  height: var(--input-height, 60px) !important;
+  line-height: 1.2 !important;
+}
+
+.large-input .v-field {
+  min-height: var(--input-height, 60px) !important;
+}
+
+.large-input input {
+  font-size: var(--input-font-size, 20px) !important;
+  height: var(--input-height, 60px) !important;
 }
 
 .add-icon-hover:hover .v-icon {
